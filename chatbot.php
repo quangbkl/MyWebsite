@@ -19,7 +19,7 @@ $sender = $input['entry'][0]['messaging'][0]['sender']['id'];
 $message = isset($input['entry'][0]['messaging'][0]['message']['text']) ? $input['entry'][0]['messaging'][0]['message']['text']: '' ;
 $postback = isset($input['entry'][0]['messaging'][0]['message']['quick_reply']['payload']) ? $input['entry'][0]['messaging'][0]['message']['quick_reply']['payload']: '' ;
 $msg_type = isset($input['entry'][0]['messaging'][0]['message']['attachments'][0]['type']) ? $input['entry'][0]['messaging'][0]['message']['attachments'][0]['type']: '' ;
-$msg_url = isset($input['entry'][0]['messaging'][0]['message']['attachments'][0]['type']['payload']['url']) ? $input['entry'][0]['messaging'][0]['message']['attachments'][0]['type']['payload']['url']: '' ;
+$msg_url = isset($input['entry'][0]['messaging'][0]['message']['attachments'][0]['payload']['url']) ? $input['entry'][0]['messaging'][0]['message']['attachments'][0]['payload']['url']: '' ;
 $json_data = null;
 
 file_put_contents("save.txt", json_encode($input));
